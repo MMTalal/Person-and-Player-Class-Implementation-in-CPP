@@ -24,48 +24,38 @@ This system implements two interconnected classes:
 - **`Person`**: Base class managing fundamental identity attributes
 - **`Player`**: Derived class extending `Person` with sports-specific properties
 
-Implements robust validation and demonstrates:
 ```mermaid
-Class Diagram (UML Representation)
+classDiagram
+    class Person {
+        -id: int
+        -name: string
+        -age: int
+        +Person()
+        +Person(int, string, int)
+        +setID(int): void
+        +setName(string): void
+        +setAge(int): void
+        +getId(): int
+        +getName(): string
+        +getAge(): int
+        +info(): void
+        +~Person()
+    }
 
-+------------------+
-|      Person      |  
-+------------------+
-| - id: int       |  
-| - name: string  |  
-| - age: int      |  
-+------------------+
-| + Person()      |  (default constructor)  
-| + Person(int, string, int) |  
-| + setID(int)    |  
-| + setName(string) |  
-| + setAge(int)   |  
-| + getId(): int  |  
-| + getName(): string |  
-| + getAge(): int |  
-| + info()        |  
-| + ~Person()     |  (destructor)  
-+------------------+
+    class Player {
+        -rating: int
+        -salary: int
+        +Player()
+        +Player(int, string, int, int, int)
+        +setRating(int): void
+        +setSalary(int): void
+        +getRating(): int
+        +getSalary(): int
+        +info(): void
+        +~Player()
+    }
 
-        ▲  
-        │ (Inheritance)
-        │  
-+------------------+
-|      Player      |  
-+------------------+
-| - rating: int   |  
-| - salary: int   |  
-+------------------+
-| + Player()      |  (default constructor)  
-| + Player(int, string, int, int, int) |  
-| + setRating(int) |  
-| + setSalary(int) |  
-| + getRating(): int |  
-| + getSalary(): int |  
-| + info()        |  
-| + ~Player()     |  (destructor)  
-+------------------+
-
+    Person <|-- Player : Inheritance
 ```
 
 ## Overview
