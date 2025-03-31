@@ -19,7 +19,7 @@ A comprehensive implementation demonstrating core OOP principles with validation
 - [Improvement Opportunities](#improvement-opportunities)
 - [Technical Specifications](#technical-specifications)
 
-## Overview 🌟
+## Overview
 This system implements two interconnected classes:
 - **`Person`**: Base class managing fundamental identity attributes
 - **`Player`**: Derived class extending `Person` with sports-specific properties
@@ -58,7 +58,6 @@ classDiagram
     Person <|-- Player : Inheritance
 ```
 
-## Overview
 This C++ program demonstrates object-oriented programming concepts, including:
 - **Encapsulation** (using private member variables and public methods)
 - **Constructors and Destructors**
